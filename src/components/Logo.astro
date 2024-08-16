@@ -1,9 +1,6 @@
 ---
-import { SITE } from 'astrowind:config';
+import { findImage } from '../utils/images';
+const appStoreLogo = await findImage('~/assets/images/logo_muguiwara_.png');
 ---
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
->
-  🚀 {SITE?.name}
-</span>
+{appStoreLogo && <img src={appStoreLogo.src} alt="logo Muguiwaras" width="40%" />}
