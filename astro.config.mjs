@@ -91,4 +91,5 @@ export default defineConfig({
       },
     },
   },
+  site: 'https://arashiyouni.github.io',
 });
